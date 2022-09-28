@@ -1,4 +1,4 @@
-/* FILE NAME   : main.cpp
+/* FILE NAME   : main.java
  * PROGRAMMER  : DS6
  * LAST UPDATE : 14.09.2022
  * PURPOSE     : Main file
