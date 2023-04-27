@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Organizations>
 	<Organization>
-		<id>353980</id>
+		<id>305706</id>
 		<name>VkusnoiTochka</name>
 		<Coordinates>
 			<x>542</x>
 			<y>42.0</y>
 		</Coordinates>
-		<creationDate>2023-03-13</creationDate>
+		<creationDate>2023-03-14</creationDate>
 		<annualTurnover>239.3</annualTurnover>
 		<type>GOVERNMENT</type>
 		<postalAddress>
@@ -27,7 +27,7 @@
 			<x>542</x>
 			<y>42.0</y>
 		</Coordinates>
-		<creationDate>2023-03-13</creationDate>
+		<creationDate>2023-03-14</creationDate>
 		<annualTurnover>239.3</annualTurnover>
 		<type>GOVERNMENT</type>
 		<postalAddress>
@@ -47,7 +47,7 @@
 			<x>542</x>
 			<y>42.0</y>
 		</Coordinates>
-		<creationDate>2023-03-13</creationDate>
+		<creationDate>2023-03-14</creationDate>
 		<annualTurnover>239.3</annualTurnover>
 		<type>GOVERNMENT</type>
 		<postalAddress>
@@ -61,13 +61,13 @@
 		</postalAddress>
 	</Organization>
 	<Organization>
-		<id>154735126</id>
+		<id>645641861</id>
 		<name>KFC</name>
 		<Coordinates>
 			<x>900</x>
 			<y>239.3</y>
 		</Coordinates>
-		<creationDate>2023-03-13</creationDate>
+		<creationDate>2023-03-14</creationDate>
 		<annualTurnover>100000.0</annualTurnover>
 		<type>COMMERCIAL</type>
 		<postalAddress>

@@ -7,7 +7,10 @@
 
 package Organization;
 
-public class Address 
+import java.util.Arrays;
+import java.util.regex.Pattern;
+
+public class Address
 {
     private String street; //Строка не может быть пустой, Поле может быть null
     private String zipCode; //Поле не может быть null
@@ -19,9 +22,41 @@ public class Address
         this.town = town;
     }
 
+    public Address(String postalAddress, Address old) {
+        if (postalAddress.contains(", "))
+        {
+            try {
+                String[] split = Arrays.stream(postalAddress.split(Pattern.quote("[,\s]\s*"))).map(String::trim).toArray(String[]::new);
+                if (split[0].equals("-"))
+                    this.zipCode = old.getZipCode();
+                if (split[1].equals("-"))
+                    this.street = old.getStreet();
+                if (split[2].equals("-")) {
+                    this.town = old.getTown();
+                }
+                this.street = split[1];
+                this.town = new Location(postalAddress);
+            } catch (IndexOutOfBoundsException e){
+                System.out.println("Incorrect data");
+            }
+        }
+    }
+
+    private Location getTown() {
+        return this.town;
+    }
+
+    private String getStreet() {
+        return this.street;
+    }
+
+    private String getZipCode() {
+        return this.zipCode;
+    }
+
     public void print(){
-        System.out.println("ZipCode = " + this.zipCode);
-        System.out.println("Street = " + this.street);
+        System.out.println(" - ZipCode = " + this.zipCode);
+        System.out.println(" - Street = " + this.street);
         town.print();
     }
     public String getAddressinXML(){
@@ -31,5 +66,9 @@ public class Address
         String location = town.getLocationinXML();
         String end = "\t\t</postalAddress>\n";
         return start + zipCode + street + location + end;
+    }
+
+    public String getAddress() {
+        return getZipCode() + ", " + getStreet() + ", " + this.town.getTown();
     }
 }
